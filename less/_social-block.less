@@ -1,0 +1,41 @@
+/* Social-block */
+
+.social-block {
+    margin-top: 100px;
+}
+
+.social-block__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 33px;
+}
+
+.social-block__item {
+    margin-right: 30px;
+    
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.social-block__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(192, 192, 192, 0.15);
+    transition: color .3s, background-color .3s;
+}
+
+@media screen and (min-width: 1201px) {
+    .social-block__link {
+        &:hover {
+            background-color: #2F80ED;
+            color: #FFFFFF;
+        }
+    }
+}
+/* //Social-block */
