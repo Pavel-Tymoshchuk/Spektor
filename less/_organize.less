@@ -17,6 +17,7 @@
 .organizer__item {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     font-weight: 700;
     background-color: #FFFFFF;
     box-shadow: 0px 4px 10px rgba(192, 192, 192, 0.15);
@@ -28,8 +29,14 @@
 }
 
 .organizer__item__name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 20px;
     line-height: 130%;
+    max-height: 52px;
     letter-spacing: 0.25px;
 }
 
@@ -57,6 +64,81 @@
     line-height: 110%;
     letter-spacing: 0.25px;
     color: rgba(61, 60, 56, 0.75);
+}
+
+@media screen and (max-width: 1210px) and (min-width: 768px) {
+    .organizer__list {
+        width: calc(100% + 40px);
+        padding-left: 20px;
+        margin-left: -20px;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        
+        &::after {
+            content: '.';
+            font-size: 44px;
+            color: transparent;
+        }
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    .organizer {
+        margin-top: 70px;
+    }
+    
+    .organizer__wrapper {
+        padding: 0px 20px;
+    }
+    
+    .organizer__item {
+        width: 236px;
+        height: 137px;
+        margin-right: 10px;
+        padding: 20px;
+    }
+    
+    .organizer__item__name {
+        font-size: 18px;
+        max-height: 46px;
+    }
+    
+    .organizer__item__calc {
+        font-size: 12px;
+        max-height: 28px;
+        margin-left: 5px;
+    }
+    
+    .organizer__item__img {
+        width: 62px;
+        height: 31px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .organizer {
+        margin-top: 50px;
+    }
+    
+    .organizer__wrapper {
+        padding: 0px 16px;
+    }
+    
+    .organizer__list {
+        margin-right: 0px;
+        flex-wrap: wrap;
+    }
+    
+    .organizer__item {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
 }
 
 /* //Organize */

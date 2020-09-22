@@ -7,6 +7,7 @@ gulp.task('serve', ['less'], function() {
     });
     gulp.watch("less/*.less", ['less']);
     gulp.watch("less/index/*.less", ['less']);
+    gulp.watch("less/events/*.less", ['less']);
     // gulp.watch("less/*.less").on('change', browserSync.reload);
     // gulp.watch("less/index/*.less").on('change', browserSync.reload);
     gulp.watch("*.html").on('change', browserSync.reload);
@@ -27,9 +28,15 @@ var less = require('gulp-less');
 var path = require('path');
  
 gulp.task('less', function () {
-  return gulp.src('less/main.less')
+  return [gulp.src('less/index/mainIndex.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css')),
+    gulp.src('less/events/mainEvents.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(gulp.dest('./css')),
+    ]
 });

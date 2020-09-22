@@ -69,6 +69,14 @@ document.addEventListener("DOMContentLoaded", function(){
             overlay.classList.add('active');
             htmlOverflow.classList.add('overflow');
             
+            if(elem.closest('.js-header-burger')) {
+                elem.closest('.js-header-burger').classList.add('active');
+                setTimeout(() => {
+                    elem.closest('.js-header-burger').classList.remove('js-button');
+                    elem.closest('.js-header-burger').classList.add('js-close');
+                }, 100);
+            }
+            
             if(popupActive) {
                 popupActive.classList.remove('active');
             }
@@ -79,6 +87,14 @@ document.addEventListener("DOMContentLoaded", function(){
             if(popupActive.classList.contains('popup-more-reviews')) {
                 let reviewPopupInfo = document.querySelector('.js-popup-reviews .js-reviews-container');
                 reviewPopupInfo.remove();
+            }
+            if(popupActive.classList.contains('header__burder-wrapper')) {
+                let burgerButton = document.querySelector('.js-header-burger');
+                burgerButton.classList.remove('active');
+                setTimeout(() => {
+                    burgerButton.classList.add('js-button');
+                    burgerButton.classList.remove('js-close');
+                }, 100);
             }
             popupActive.classList.remove('active');
             overlay.classList.remove('active');
@@ -92,6 +108,14 @@ document.addEventListener("DOMContentLoaded", function(){
             let reviewPopupInfo = document.querySelector('.js-popup-reviews .js-reviews-container');
             reviewPopupInfo.remove();
         }
+        if(popupActive.classList.contains('header__burder-wrapper')) {
+            let burgerButton = document.querySelector('.js-header-burger');
+            burgerButton.classList.remove('active');
+            setTimeout(() => {
+                burgerButton.classList.add('js-button');
+                burgerButton.classList.remove('js-close');
+            }, 100);
+        }
         popupActive.classList.remove('active');
         overlay.classList.remove('active');
         htmlOverflow.classList.remove('overflow');
@@ -99,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
     // Popup
     
-
+    // Check Input 
     function checkInput() {
         let allInput = document.querySelectorAll('.js-input');
         allInput.forEach(function(item){
@@ -124,6 +148,27 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(() => {
         checkInput();
     }, 1000);
+    
+    // //Check Input
+    
+    // Footer items
+    
+    function checkFooterItems() {
+        const footerLists = document.querySelectorAll('.js-footer-info-item');
+        
+        footerLists.forEach(item => {
+            let allItems = item.querySelectorAll('.js-footer-info-link');
+            let moreButton = item.querySelector('.js-footer-info-button');
+            
+            if(allItems.length > 6) {
+                moreButton.classList.add('show');
+            }
+        });
+    }
+    
+    checkFooterItems();
+    
+    // //Footer items
     
     
     // More info

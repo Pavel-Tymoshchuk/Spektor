@@ -11,6 +11,8 @@
     font-weight: 700;
     background-color: #2F80ED;
     box-shadow: 0px 4px 10px rgba(34, 34, 52, 0.15);
+    position: relative;
+    z-index: 10;
 }
 
 .header__wrapper {
@@ -22,6 +24,8 @@
     display: flex;
     align-items: center;
     margin-right: 50px;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .header__logo__img {
@@ -79,6 +83,11 @@
     color: #FFFFFF;
 }
 
+.header-burger,
+.header__burder-wrapper {
+    display: none;
+}
+
 
 @media screen and (min-width: 1201px) {
     .header__menu-item {
@@ -96,6 +105,218 @@
     .button-border--header {
         &:hover {
             color: #e6e6e6;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .header__nav,
+    .header__profile {
+        display: none;
+    }
+    
+    .header-burger {
+        display: flex;
+        width: 30px;
+        height: 18px;
+        position: relative;
+        margin: 0px auto;
+        
+        &.active {
+            .decor {
+                opacity: 0;
+                transform: translateY(-50%) translateX(-10px);
+            }
+            
+            &::before {
+                transform: rotate(45deg) translate(6px, 5px);
+            }
+            
+            &::after {
+                transform: rotate(-45deg) translate(6px, -5px);
+            }
+        }
+        
+        .decor {
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background: #FFFFFF;
+            border-radius: 1px;
+            transform: translateY(-50%) translateX(0px);
+            transition: transform .3s, opacity .3s;
+        }
+        
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background: #FFFFFF;
+            border-radius: 1px;
+            transition: transform .3s;
+        }
+        
+        &::before {
+            top: 0px;
+        }
+        
+        &::after {
+            bottom: 0px;
+        }
+    }
+    
+    .header__burder-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0px;
+        top: 69px;
+        max-width: 420px;
+        width: 100%;
+        padding: 40px 20px;
+        z-index: 4;
+        height: calc(100vh - 70px);
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        background-color: #2F80ED;
+        transform: translateX(-101%);
+        transition: transform .3s;
+        
+        &.active {
+            transform: translateX(0%);
+        }
+        
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .header__profile {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 30px;
+            padding-top: 30px;
+            width: 100%;
+            border-top: 1px solid #5899F1;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    
+    .header__menu-list {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    .header__menu-item {
+        margin: 0px 0px 30px;
+        
+        &:last-child {
+            margin: 0px;
+        }
+    }
+    
+    .header__profile__button {
+        margin: 0px 0px 30px;
+        
+        &:last-child {
+            margin: 0px;
+        }
+        
+        .icon-favorite {
+            font-size: 15px;
+        }
+        
+        .icon-account {
+            font-size: 20px;
+        }
+        
+        [class^="icon-"] {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        height: 50px;
+    }
+    
+    .header__create-post {
+        display: none;
+    }
+    
+    .header__logo__img {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .header__logo {
+        font-size: 20px;
+        line-height: 18px;
+    }
+    
+    .header-burger {
+        width: 25px;
+        height: 16px;
+        margin: 0px 0px 0px auto;
+        
+        &.active {
+            &::before {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            &::after {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+    }
+    
+    .header__burder-wrapper {
+        top: 49px;
+        height: calc(100% - 50px);
+        padding: 30px 16px;
+        
+        .header__profile {
+            font-size: 16px;
+            line-height: 19px;
+            padding-top: 20px;
+            margin: 20px 0px 0px 0px;
+        }
+    }
+    
+    .header__menu-list {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    
+    .header__menu-item {
+        margin-bottom: 20px;
+    }
+    
+    .header__profile__button {
+        margin-bottom: 20px;
+        
+        [class^="icon-"]  {
+            margin-right: 15px;
+        }
+        
+        .icon-favorite {
+            font-size: 13px;
+        }
+        
+        .icon-account {
+            font-size: 16px;
         }
     }
 }
