@@ -8,6 +8,8 @@ gulp.task('serve', ['less'], function() {
     gulp.watch("less/*.less", ['less']);
     gulp.watch("less/index/*.less", ['less']);
     gulp.watch("less/events/*.less", ['less']);
+    gulp.watch("less/event-page/*.less", ['less']);
+    gulp.watch("less/news/*.less", ['less']);
     // gulp.watch("less/*.less").on('change', browserSync.reload);
     // gulp.watch("less/index/*.less").on('change', browserSync.reload);
     gulp.watch("*.html").on('change', browserSync.reload);
@@ -34,6 +36,16 @@ gulp.task('less', function () {
     }))
     .pipe(gulp.dest('./css')),
     gulp.src('less/events/mainEvents.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(gulp.dest('./css')),
+    gulp.src('less/event-page/mainEventPage.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(gulp.dest('./css')),
+    gulp.src('less/news/mainNews.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))

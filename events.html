@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="rus">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -172,12 +172,16 @@
                     </div>
                     <div class="events__navigation">
                         <ul class="events__navigation__list">
-                            <li class="events__navigation__item js-drop-item">
-                                <button class="events__navigation__button js-drop-button">
+                            <li class="events__navigation__item events__navigation__item--calendar js-drop-item">
+                                <button class="events__navigation__button js-drop-button" v-if="windowWidth > 767">
                                     <span class="icon-calendar"></span>
                                     <span class="text">5.08.2020 - 10.09.2020</span>
                                 </button>
-                                <div class="calendar">
+                                <button class="events__navigation__button js-button" data-target="calendar" v-else>
+                                    <span class="icon-calendar"></span>
+                                    <span class="text">5.08.2020 - 10.09.2020</span>
+                                </button>
+                                <div class="calendar" v-if="windowWidth > 767">
                                     <ul class="calendar__list">
                                         <li class="calendar__item">
                                             <div class="calendar__header">
@@ -589,19 +593,22 @@
                                 </div>
                             </li>
                             <li class="events__navigation__item events__navigation__item--search">
-                                <button class="events__navigation__button">
+                                <button class="events__navigation__button js-button" data-target="choose-city">
                                     <span class="icon-place"></span>
                                     <span class="text">Киев</span>
                                 </button>
                                 <input type="text" class="events__navigation__input" placeholder="Введите мероприятие или город">
                             </li>
-                            <li class="events__navigation__item">
-                                <button class="events__navigation__button">
+                            <li class="events__navigation__item events__navigation__item--filter">
+                                <button class="events__navigation__button js-button" data-target="filter">
                                     <span class="icon-filter"></span>
                                     <span class="text">Фильтры</span>
                                 </button>
+                                <button class="main-button main-button--filter js-button" data-target="mobile-filters">
+                                    <span class="text">Фильтры</span>
+                                </button>
                             </li>
-                            <li class="events__navigation__item general-drop js-drop-item">
+                            <li class="events__navigation__item events__navigation__item--sort general-drop js-drop-item">
                                 <button class="events__navigation__button general-drop-button js-drop-button">
                                     <span class="icon-sort"></span>
                                     <span class="text">По умолчанию</span>
@@ -642,7 +649,7 @@
                                     <span class="icon-place"></span>
                                     <p class="text">Одесса</p>
                                 </div>
-                                <p class="events__item__name">Внутренний аудит</p>
+                                <a href="#" class="events__item__name">Внутренний аудит</a>
                                 <p class="events__item__sub-info">Good school, учебный центр</p>
                                 <div class="events__item__footer">
                                     <a href="#" class="events__item__type">Бизнес</a>
@@ -667,7 +674,7 @@
                                     <span class="icon-place"></span>
                                     <p class="text">Одесса</p>
                                 </div>
-                                <p class="events__item__name">Внутренний аудит</p>
+                                <a href="#" class="events__item__name">Внутренний аудит</a>
                                 <p class="events__item__sub-info">Good school, учебный центр</p>
                                 <div class="events__item__footer">
                                     <a href="#" class="events__item__type">Бизнес</a>
@@ -692,7 +699,7 @@
                                     <span class="icon-place"></span>
                                     <p class="text">Одесса</p>
                                 </div>
-                                <p class="events__item__name">Внутренний аудит</p>
+                                <a href="#" class="events__item__name">Внутренний аудит</a>
                                 <p class="events__item__sub-info">Good school, учебный центр</p>
                                 <div class="events__item__footer">
                                     <a href="#" class="events__item__type">Бизнес</a>
@@ -717,7 +724,7 @@
                                     <span class="icon-place"></span>
                                     <p class="text">Одесса</p>
                                 </div>
-                                <p class="events__item__name">Внутренний аудит</p>
+                                <a href="#" class="events__item__name">Внутренний аудит</a>
                                 <p class="events__item__sub-info">Good school, учебный центр</p>
                                 <div class="events__item__footer">
                                     <a href="#" class="events__item__type">Финансы</a>
@@ -741,7 +748,7 @@
                                     <span class="icon-place"></span>
                                     <p class="text">Одесса</p>
                                 </div>
-                                <p class="events__item__name">Внутренний аудит</p>
+                                <a href="#" class="events__item__name">Внутренний аудит</a>
                                 <p class="events__item__sub-info">Good school, учебный центр</p>
                                 <div class="events__item__footer">
                                     <a href="#" class="events__item__type">Бизнес</a>
@@ -766,7 +773,7 @@
                                     <span class="icon-place"></span>
                                     <p class="text">Одесса</p>
                                 </div>
-                                <p class="events__item__name">Внутренний аудит</p>
+                                <a href="#" class="events__item__name">Внутренний аудит</a>
                                 <p class="events__item__sub-info">Good school, учебный центр</p>
                                 <div class="events__item__footer">
                                     <a href="#" class="events__item__type">Бизнес</a>
@@ -791,7 +798,7 @@
                                     <span class="icon-place"></span>
                                     <p class="text">Одесса</p>
                                 </div>
-                                <p class="events__item__name">Внутренний аудит</p>
+                                <a href="#" class="events__item__name">Внутренний аудит</a>
                                 <p class="events__item__sub-info">Good school, учебный центр</p>
                                 <div class="events__item__footer">
                                     <a href="#" class="events__item__type">Финансы</a>
@@ -815,7 +822,7 @@
                                     <span class="icon-place"></span>
                                     <p class="text">Одесса</p>
                                 </div>
-                                <p class="events__item__name">Внутренний аудит</p>
+                                <a href="#" class="events__item__name">Внутренний аудит</a>
                                 <p class="events__item__sub-info">Good school, учебный центр</p>
                                 <div class="events__item__footer">
                                     <a href="#" class="events__item__type">Бизнес</a>
@@ -830,6 +837,16 @@
                     <a href="#" class="button-border button-border--position-center">
                         <span class="text">загрузить ещё</span>
                     </a>
+                </div>
+            </section>
+            <section class="seo-block">
+                <div class="seo-block__wrapper container">
+                    <p class="main-caption-m main-caption-m--center">SEO</p>
+                    <div class="seo-text">
+                        <h5>Подзаголовок</h5>
+                        <p>Таким образом консультация с широким активом позволяет выполнять важные задания по разработке дальнейших направлений развития. С другой стороны постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции требуют определения и уточнения систем массового участия.</p>
+                         <p>Таким образом консультация с широким активом позволяет выполнять важные задания по разработке дальнейших направлений развития. С другой стороны постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции требуют определения и уточнения систем массового участия.</p>
+                    </div>
                 </div>
             </section>
             <section class="social-block">
@@ -1122,11 +1139,982 @@
                 </div>
             </div>
         </footer>
+        <section class="popup popup-filter popup-filter--city js-popup" data-target="choose-city">
+            <button class="close__popup js-close">
+                <span class="icon-close"></span>
+            </button>
+            <div class="popup__wrapper">
+                <p class="filter-popup__caption">Выберите город</p>
+                <ul class="filter-popup__list">
+                    <li class="filter-popup__item">
+                        <ul class="filter-popup-selected__list">
+                            <li class="filter-popup-selected__item">
+                                <span class="text">Харьков</span>
+                            </li>
+                        </ul>
+                        <ul class="filter-popup-choose__list">
+                            <li class="filter-popup-choose__item">
+                                <span class="text">Певомайск</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="text">Циркуны</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="filter-popup__item">
+                        <p class="filter-popup__item__caption">Областные центры</p>
+                        <ul class="filter-popup-choose__list">
+                            <li class="filter-popup-choose__item">
+                                <span class="text">Любой</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="text">Киев</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="text">Чернигов</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="text">Любой</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="text">Киев</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="text">Чернигов</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="popup popup-filter js-popup" data-target="filter">
+            <button class="close__popup js-close">
+                <span class="icon-close"></span>
+            </button>
+            <div class="popup__wrapper">
+                <p class="filter-popup__caption">Фильтры</p>
+                <ul class="filter-popup__list">
+                    <li class="filter-popup__item">
+                        <p class="filter-popup__item__caption">Темы мероприятий</p>
+                        <ul class="filter-popup-selected__list">
+                            <li class="filter-popup-selected__item">
+                                <span class="text">Финансы</span>
+                                <span class="icon-close"></span>
+                            </li>
+                            <li class="filter-popup-selected__item">
+                                <span class="text">Маркетинг</span>
+                                <span class="icon-close"></span>
+                            </li>
+                        </ul>
+                        <ul class="filter-popup-choose__list">
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Охрана труда</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Охрана труда</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Охрана труда</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Охрана труда</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Охрана труда</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="filter-popup__item">
+                        <p class="filter-popup__item__caption">Формат</p>
+                        <ul class="filter-popup-selected__list">
+                            <li class="filter-popup-selected__item">
+                                <span class="text">Финансы</span>
+                                <span class="icon-close"></span>
+                            </li>
+                            <li class="filter-popup-selected__item">
+                                <span class="text">Маркетинг</span>
+                                <span class="icon-close"></span>
+                            </li>
+                        </ul>
+                        <ul class="filter-popup-choose__list">
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Курсы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Охрана труда</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Охрана труда</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Охрана труда</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Все темы</span>
+                            </li>
+                            <li class="filter-popup-choose__item">
+                                <span class="icon-close"></span>
+                                <span class="text">Охрана труда</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="filter-popup__item">
+                        <p class="filter-popup__item__caption">Организаторы</p>
+                        <ul class="filter-popup__organizer-list">
+                            <li class="filter-popup__organizer-item">
+                                <label class="checkbox__wrapper">
+                                    <input type="checkbox" value="Все" class="input-checkbox">
+                                    <span class="custom-check">
+                                        <span class="icon-active"></span>
+                                    </span>
+                                    <span class="text">Все</span>
+                                </label>
+                            </li>
+                            <li class="filter-popup__organizer-item">
+                                <label class="checkbox__wrapper">
+                                    <input type="checkbox" value="Guarantee TNG " class="input-checkbox">
+                                    <span class="custom-check">
+                                        <span class="icon-active"></span>
+                                    </span>
+                                    <span class="text">Guarantee TNG </span>
+                                </label>
+                            </li>
+                            <li class="filter-popup__organizer-item">
+                                <label class="checkbox__wrapper">
+                                    <input type="checkbox" value="ATK Group " class="input-checkbox">
+                                    <span class="custom-check">
+                                        <span class="icon-active"></span>
+                                    </span>
+                                    <span class="text">ATK Group </span>
+                                </label>
+                            </li>
+                            <li class="filter-popup__organizer-item">
+                                <label class="checkbox__wrapper">
+                                    <input type="checkbox" value="Все" class="input-checkbox">
+                                    <span class="custom-check">
+                                        <span class="icon-active"></span>
+                                    </span>
+                                    <span class="text">Все</span>
+                                </label>
+                            </li>
+                            <li class="filter-popup__organizer-item">
+                                <label class="checkbox__wrapper">
+                                    <input type="checkbox" value="Guarantee TNG " class="input-checkbox">
+                                    <span class="custom-check">
+                                        <span class="icon-active"></span>
+                                    </span>
+                                    <span class="text">Guarantee TNG </span>
+                                </label>
+                            </li>
+                            <li class="filter-popup__organizer-item">
+                                <label class="checkbox__wrapper">
+                                    <input type="checkbox" value="ATK Group " class="input-checkbox">
+                                    <span class="custom-check">
+                                        <span class="icon-active"></span>
+                                    </span>
+                                    <span class="text">ATK Group </span>
+                                </label>
+                            </li>
+                            <li class="filter-popup__organizer-item">
+                                <label class="checkbox__wrapper">
+                                    <input type="checkbox" value="Все" class="input-checkbox">
+                                    <span class="custom-check">
+                                        <span class="icon-active"></span>
+                                    </span>
+                                    <span class="text">Все</span>
+                                </label>
+                            </li>
+                            <li class="filter-popup__organizer-item">
+                                <label class="checkbox__wrapper">
+                                    <input type="checkbox" value="Guarantee TNG " class="input-checkbox">
+                                    <span class="custom-check">
+                                        <span class="icon-active"></span>
+                                    </span>
+                                    <span class="text">Guarantee TNG </span>
+                                </label>
+                            </li>
+                            <li class="filter-popup__organizer-item">
+                                <label class="checkbox__wrapper">
+                                    <input type="checkbox" value="ATK Group " class="input-checkbox">
+                                    <span class="custom-check">
+                                        <span class="icon-active"></span>
+                                    </span>
+                                    <span class="text">ATK Group </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="popup-filter__buttons">
+                    <button class="text-button js-close">сбросить все фильтры</button>
+                    <button class="main-button">
+                        <span class="text">применить</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="popup popup-filter popup-filter--events popup-filter--calendar js-popup" data-target="calendar">
+            <div class="popup__wrapper">
+                <div class="calendar">
+                    <ul class="calendar__list">
+                        <li class="calendar__item">
+                            <div class="calendar__header">
+                                <p class="calendar__header__caption">Август</p>
+                            </div>
+                            <table class="calendar__table">
+                                <thead>
+                                    <tr class="calendar__table__header">
+                                        <th class="calendar__table__item"><span>Пн</span></th>
+                                        <th class="calendar__table__item"><span>Вт</span></th>
+                                        <th class="calendar__table__item"><span>Ср</span></th>
+                                        <th class="calendar__table__item"><span>Чт</span></th>
+                                        <th class="calendar__table__item"><span>Пт</span></th>
+                                        <th class="calendar__table__item"><span>Сб</span></th>
+                                        <th class="calendar__table__item"><span>Вс</span></th>
+                                    </tr>
+                                </thead> 
+                                <tbody>
+                                    <tr class="calendar__table__tr" data="1">
+                                        <td class="calendar__table__item calendar__table__other-moth">
+                                            <a href="#" class="calendar__table__data">27 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__other-moth">
+                                            <a href="#" class="calendar__table__data">28 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__other-moth">
+                                            <a href="#" class="calendar__table__data">29 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__other-moth">
+                                            <a href="#" class="calendar__table__data">30 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item"><a href="#" class="calendar__table__data">1 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item"><a href="#" class="calendar__table__data">2 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item"><a href="#" class="calendar__table__data">3 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="calendar__table__tr" data="2">
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">4 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">5 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">6 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__item-event-days first-day">
+                                            <a href="#" class="calendar__table__data calendar__table__data-active">7 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__item-event-days">
+                                            <a href="#" class="calendar__table__data">8 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__item-event-days ">
+                                            <a href="#" class="calendar__table__data">9 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__item-event-days last-day">
+                                            <a href="#" class="calendar__table__data">10 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="calendar__table__tr" data="3">
+                                        <td class="calendar__table__item">
+                                            <a href="#" class="calendar__table__data">11 
+                                            <div class="event_wrapper"></div></a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">12 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">13 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data ui-state-active">14 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">15 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">16 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">17 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="calendar__table__tr" data="4">
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">18 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">19 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item "><a href="#" class="calendar__table__data">20 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item "><a href="#" class="calendar__table__data">21 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ui-datepicker-today">
+                                            <a href="#" class="calendar__table__data ui-state-active">22 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">23 
+                                            <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">24 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="calendar__table__tr" data="5">
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">25 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">26 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">27 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">28 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">29 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">30 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">31 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="calendar__item">
+                            <div class="calendar__header">
+                                <p class="calendar__header__caption">Сентябрь</p>
+                            </div>
+                            <table class="calendar__table">
+                                <thead>
+                                    <tr class="calendar__table__header">
+                                        <th class="calendar__table__item"><span>Пн</span></th>
+                                        <th class="calendar__table__item"><span>Вт</span></th>
+                                        <th class="calendar__table__item"><span>Ср</span></th>
+                                        <th class="calendar__table__item"><span>Чт</span></th>
+                                        <th class="calendar__table__item"><span>Пт</span></th>
+                                        <th class="calendar__table__item"><span>Сб</span></th>
+                                        <th class="calendar__table__item"><span>Вс</span></th>
+                                    </tr>
+                                </thead> 
+                                <tbody>
+                                    <tr class="calendar__table__tr" data="1">
+                                        <td class="calendar__table__item calendar__table__other-moth">
+                                            <a href="#" class="calendar__table__data">27 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__other-moth">
+                                            <a href="#" class="calendar__table__data">28 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__other-moth">
+                                            <a href="#" class="calendar__table__data">29 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__other-moth">
+                                            <a href="#" class="calendar__table__data">30 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item"><a href="#" class="calendar__table__data">1 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item"><a href="#" class="calendar__table__data">2 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                        <td class="calendar__table__item"><a href="#" class="calendar__table__data">3 
+                                            <div class="event_wrapper"></div>
+                                        </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="calendar__table__tr" data="2">
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">4 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">5 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">6 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__item-event-days first-day">
+                                            <a href="#" class="calendar__table__data calendar__table__data-active">7 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__item-event-days">
+                                            <a href="#" class="calendar__table__data">8 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__item-event-days ">
+                                            <a href="#" class="calendar__table__data">9 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item calendar__table__item-event-days last-day">
+                                            <a href="#" class="calendar__table__data">10 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="calendar__table__tr" data="3">
+                                        <td class="calendar__table__item">
+                                            <a href="#" class="calendar__table__data">11 
+                                            <div class="event_wrapper"></div></a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">12 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">13 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">14 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">15 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">16 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">17 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="calendar__table__tr" data="4">
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">18 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">19 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item "><a href="#" class="calendar__table__data">20 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item "><a href="#" class="calendar__table__data">21 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ui-datepicker-today">
+                                            <a href="#" class="calendar__table__data ui-state-active">22 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">23 
+                                            <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">24 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="calendar__table__tr" data="5">
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">25 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">26 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">27 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">28 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">29 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">30 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                        <td class="calendar__table__item ">
+                                            <a href="#" class="calendar__table__data">31 
+                                                <div class="event_wrapper"></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+                <button class="main-button main-button--filter js-close">
+                    <span class="text">готово</span>
+                </button>
+            </div>
+        </section>
+         <section class="popup popup-filter popup-filter--events js-popup" data-target="mobile-filters">
+            <div class="popup__wrapper">
+                <p class="filter-popup__caption">Фильтры</p>
+                <ul class="filter-popup__mobile-list">
+                    <li class="filter-popup__mobile-item">
+                        <input type="text" class="events__navigation__input" placeholder="Введите мероприятие или город">
+                        <button class="filter-popup__btn-search">
+                            <span class="icon-search"></span>
+                        </button>
+                    </li>
+                    <li class="filter-popup__mobile-item js-drop-item">
+                        <button class="filter-popup__mobile-button js-drop-button">
+                            <span class="icon-place"></span>
+                            <span class="text">Киев</span>
+                        </button>
+                        <div class="filter-popup__mobile-container">
+                            <p class="filter-popup__caption">Выберите город</p>
+                            <ul class="filter-popup__list">
+                                <li class="filter-popup__item">
+                                    <ul class="filter-popup-selected__list">
+                                        <li class="filter-popup-selected__item">
+                                            <span class="text">Харьков</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="filter-popup-choose__list">
+                                        <li class="filter-popup-choose__item">
+                                            <span class="text">Певомайск</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="text">Циркуны</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="filter-popup__item">
+                                    <p class="filter-popup__item__caption">Областные центры</p>
+                                    <ul class="filter-popup-choose__list">
+                                        <li class="filter-popup-choose__item">
+                                            <span class="text">Любой</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="text">Киев</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="text">Чернигов</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="text">Любой</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="text">Киев</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="text">Чернигов</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="main-button main-button--filter js-drop-button">
+                                <span class="text">готово</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="filter-popup__mobile-item js-drop-item">
+                        <button class="filter-popup__mobile-button js-drop-button">
+                            <span class="text">Темы меропиятий</span>
+                        </button>
+                        <div class="filter-popup__mobile-container">
+                            <p class="filter-popup__caption">Темы мероприятия</p>
+                            <ul class="filter-popup__list">
+                                <li class="filter-popup__item">
+                                    <p class="filter-popup__item__caption">Темы мероприятий</p>
+                                    <ul class="filter-popup-selected__list">
+                                        <li class="filter-popup-selected__item">
+                                            <span class="text">Финансы</span>
+                                            <span class="icon-close"></span>
+                                        </li>
+                                        <li class="filter-popup-selected__item">
+                                            <span class="text">Маркетинг</span>
+                                            <span class="icon-close"></span>
+                                        </li>
+                                    </ul>
+                                    <ul class="filter-popup-choose__list">
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Охрана труда</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Охрана труда</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Охрана труда</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Охрана труда</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Охрана труда</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="main-button main-button--filter js-drop-button">
+                                <span class="text">готово</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="filter-popup__mobile-item js-drop-item">
+                        <button class="filter-popup__mobile-button js-drop-button">
+                            <span class="text">Формат</span>
+                        </button>
+                        <div class="filter-popup__mobile-container">
+                            <p class="filter-popup__caption">Формат</p>
+                            <ul class="filter-popup__list">
+                                <li class="filter-popup__item">
+                                    <ul class="filter-popup-selected__list">
+                                        <li class="filter-popup-selected__item">
+                                            <span class="text">Финансы</span>
+                                            <span class="icon-close"></span>
+                                        </li>
+                                        <li class="filter-popup-selected__item">
+                                            <span class="text">Маркетинг</span>
+                                            <span class="icon-close"></span>
+                                        </li>
+                                    </ul>
+                                    <ul class="filter-popup-choose__list">
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Курсы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Охрана труда</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Охрана труда</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Охрана труда</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Все темы</span>
+                                        </li>
+                                        <li class="filter-popup-choose__item">
+                                            <span class="icon-close"></span>
+                                            <span class="text">Охрана труда</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="main-button main-button--filter js-drop-button">
+                                <span class="text">готово</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="filter-popup__mobile-item js-drop-item">
+                        <button class="filter-popup__mobile-button js-drop-button">
+                            <span class="text">Организаторы</span>
+                        </button>
+                        <div class="filter-popup__mobile-container">
+                            <p class="filter-popup__caption">Организаторы</p>
+                            <ul class="filter-popup__list">
+                                <li class="filter-popup__item">
+                                    <ul class="filter-popup__organizer-list">
+                                        <li class="filter-popup__organizer-item">
+                                            <label class="checkbox__wrapper">
+                                                <input type="checkbox" value="Все" class="input-checkbox">
+                                                <span class="custom-check">
+                                                    <span class="icon-active"></span>
+                                                </span>
+                                                <span class="text">Все</span>
+                                            </label>
+                                        </li>
+                                        <li class="filter-popup__organizer-item">
+                                            <label class="checkbox__wrapper">
+                                                <input type="checkbox" value="Guarantee TNG " class="input-checkbox">
+                                                <span class="custom-check">
+                                                    <span class="icon-active"></span>
+                                                </span>
+                                                <span class="text">Guarantee TNG </span>
+                                            </label>
+                                        </li>
+                                        <li class="filter-popup__organizer-item">
+                                            <label class="checkbox__wrapper">
+                                                <input type="checkbox" value="ATK Group " class="input-checkbox">
+                                                <span class="custom-check">
+                                                    <span class="icon-active"></span>
+                                                </span>
+                                                <span class="text">ATK Group </span>
+                                            </label>
+                                        </li>
+                                        <li class="filter-popup__organizer-item">
+                                            <label class="checkbox__wrapper">
+                                                <input type="checkbox" value="Все" class="input-checkbox">
+                                                <span class="custom-check">
+                                                    <span class="icon-active"></span>
+                                                </span>
+                                                <span class="text">Все</span>
+                                            </label>
+                                        </li>
+                                        <li class="filter-popup__organizer-item">
+                                            <label class="checkbox__wrapper">
+                                                <input type="checkbox" value="Guarantee TNG " class="input-checkbox">
+                                                <span class="custom-check">
+                                                    <span class="icon-active"></span>
+                                                </span>
+                                                <span class="text">Guarantee TNG </span>
+                                            </label>
+                                        </li>
+                                        <li class="filter-popup__organizer-item">
+                                            <label class="checkbox__wrapper">
+                                                <input type="checkbox" value="ATK Group " class="input-checkbox">
+                                                <span class="custom-check">
+                                                    <span class="icon-active"></span>
+                                                </span>
+                                                <span class="text">ATK Group </span>
+                                            </label>
+                                        </li>
+                                        <li class="filter-popup__organizer-item">
+                                            <label class="checkbox__wrapper">
+                                                <input type="checkbox" value="Все" class="input-checkbox">
+                                                <span class="custom-check">
+                                                    <span class="icon-active"></span>
+                                                </span>
+                                                <span class="text">Все</span>
+                                            </label>
+                                        </li>
+                                        <li class="filter-popup__organizer-item">
+                                            <label class="checkbox__wrapper">
+                                                <input type="checkbox" value="Guarantee TNG " class="input-checkbox">
+                                                <span class="custom-check">
+                                                    <span class="icon-active"></span>
+                                                </span>
+                                                <span class="text">Guarantee TNG </span>
+                                            </label>
+                                        </li>
+                                        <li class="filter-popup__organizer-item">
+                                            <label class="checkbox__wrapper">
+                                                <input type="checkbox" value="ATK Group " class="input-checkbox">
+                                                <span class="custom-check">
+                                                    <span class="icon-active"></span>
+                                                </span>
+                                                <span class="text">ATK Group </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="main-button main-button--filter js-drop-button">
+                                <span class="text">готово</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <button class="main-button main-button--filter js-close">
+                    <span class="text">применить</span>
+                </button>
+                <button class="text-button js-close">сбросить все фильтры</button>
+            </div>
+        </section>
         <div class="overlay"></div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
     <script src="./js/main.js"></script>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/events.js"></script>
 </body>
 </html>

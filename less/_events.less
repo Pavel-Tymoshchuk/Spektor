@@ -106,6 +106,7 @@
 
 
 .events__item__name {
+    display: block;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -113,6 +114,7 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 10px;
+    transition: color .3s;
 }
 
 .events__item__sub-info {
@@ -168,6 +170,12 @@
     .add-to-favorite {
         &:hover {
             color: #f9c701;
+        }
+    }
+    
+    .events__item__name {
+        &:hover {
+            color: #2F80ED;
         }
     }
 }

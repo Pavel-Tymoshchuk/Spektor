@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spektor</title>
+    <link rel="stylesheet" href="./css/mainEventPage.css">
+</head>
+<body>
+    <section id="app">
+        <header class="header">
+            <div class="header__wrapper container">
+                <div class="header__logo">
+                    <img class="header__logo__img" src="./img/logo.png" alt="Spektor">
+                    <p class="header__logo__text">spektor</p>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Мероприятия</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Организаторы</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Тренеры</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Услуги сайта</a>
+                        </li>
+                        <li class="header__menu-item general-drop js-drop-item">
+                            <button class="general-drop-button  js-drop-button">
+                                <span class="text">Еще</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <div class="general-drop-wrapper general-drop-wrapper--text">
+                                <ul class="general-drop-list">
+                                    <li class="general-drop-item">
+                                        <a href="#" class="general-drop-link">Список</a>
+                                    </li>
+                                    <li class="general-drop-item">
+                                        <a href="#" class="general-drop-link">Список1</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__profile">
+                    <a href="#" class="header__profile__button">
+                        <span class="icon-favorite"></span>
+                        <span class="text">Избранное</span>
+                    </a>
+                    <a href="#" class="header__profile__button">
+                        <span class="icon-account"></span>
+                        <span class="text">Войти</span>
+                    </a>
+                </div>
+                <button class="header-burger js-button js-header-burger" data-target="burger">
+                    <span class="decor"></span>
+                </button>
+                <div class="general-drop js-drop-item">
+                    <button class="general-drop-button button-border button-border--header header__create-post js-drop-button">
+                        <span class="text">создать запись</span>
+                        <span class="icon-drop"></span>
+                    </button>
+                    <div class="general-drop-wrapper general-drop-wrapper--text">
+                        <ul class="general-drop-list">
+                            <li class="general-drop-item">
+                                <a href="#" class="general-drop-link">Опубликовать мероприятие</a>
+                            </li>
+                            <li class="general-drop-item">
+                                <a href="#" class="general-drop-link">Опубликовать статью</a>
+                            </li>
+                            <li class="general-drop-item">
+                                <a href="#" class="general-drop-link">Создать рекламу</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="header__burder-wrapper js-popup" data-target="burger">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Мероприятия</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Организаторы</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Тренеры</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Услуги сайта</a>
+                    </li>
+                </ul>
+                <div class="header__profile">
+                    <a href="#" class="header__profile__button">
+                        <span class="icon-favorite"></span>
+                        <span class="text">Избранное</span>
+                    </a>
+                    <a href="#" class="header__profile__button">
+                        <span class="icon-account"></span>
+                        <span class="text">Войти</span>
+                    </a>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="breadcrumbs">
+                <div class="breadcrumbs__wrapper container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Мероприятия</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Презентация среднеобразовательной школы IT Step School</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="event-page">
+                <div class="event-page__wrapper container">
+                    <div class="event-page__img event-page__img--mobile">
+                        <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                        <div class="event-page__sale-info">-5% при оформлении участия на мероприятие через этот сайт</div>
+                    </div>
+                    <p class="main-caption-m event-page__caption">Презентация среднеобразовательной школы IT Step School</p>
+                    <p class="event-page__company">“Шаг” компьютерная акдемия</p>
+                    <!-- Если мероприятие без фото event-page__header--without-photo-->
+                    <div class="event-page__header">
+                        <div class="event-page__img">
+                            <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                            <div class="event-page__sale-info">-5% при оформлении участия на мероприятие через этот сайт</div>
+                        </div>
+                        <!-- Если мероприятие прошло класс event-page__info--disabled -->
+                        <div class="event-page__info">
+                            <div class="event-page__info__header">
+                                <div class="event-page__info__date-start">24 <span>июля</span></div>
+                                <img class="event-page__info__logo" v-lazy="'./img/events-img-1.png'" alt="Title">
+                            </div>
+                            <div class="event-page__info__date">
+                                <span class="icon-calendar"></span>
+                                <span class="text">24.07.-27.07.2020</span>
+                            </div>
+                            <div class="event-page__info__place">
+                                <span class="icon-place"></span>
+                                <span class="text">Днепр, ул. Пушкинская, 29</span>
+                            </div>
+                            <div class="event-page__price">
+                                <p class="event-page__price-old">1700 грн</p> 
+                                <p class="event-page__price-current">1500 грн</p>
+                            </div>
+                            <div class="event-page__info__footer">
+                                <!-- Если мероприятие прошло класс disabled -->
+                                <button class="main-button-color js-button" data-target="registration-to-event">
+                                    <span class="text">принять участие</span>
+                                </button>
+                                <button class="text-button text-button--favorite">
+                                    <span class="icon-favorite-line"></span>
+                                    <span class="text">добавить в избранное</span>
+                                </button>
+                                <button class="event-page__info__people js-button" data-target="people">
+                                    <span class="icon-person"></span>
+                                    <span class="text">10 человек заинтересованы</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- <div class="event-page__sale-info event-page__sale-info--without-photo">-5% при оформлении участия на мероприятие через этот сайт</div> -->
+                    </div>
+                    <div class="event-page__body">
+                        <div class="event-page__main-info">
+                            <p class="event-page__sub-caption">Видеообращение организатора</p>
+                            <div class="event-page__video">
+                                <img src="./img/video.png" alt="">
+                            </div>
+                            <div class="event-page__content">
+                                <h2>О мероприятии</h2>
+                                <p>Задача организации, в особенности же новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Товарищи! новая модель организационной деятельности способствует подготовки и реализации существенных финансовых и административных условий.</p>
+                                <h4>Список</h4>
+                                <ul>
+                                    <li>реализация намеченных плановых заданий</li>
+                                    <li>процесс внедрения</li>
+                                    <li>модернизации системы обучения кадров</li>
+                                </ul>
+                                <p>Задача организации, в особенности же новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Товарищи! новая модель организационной деятельности способствует подготовки и реализации существенных финансовых и административных условий.</p>
+                            </div>
+                            <div class="general-communication-btn__wrapper">
+                                <button class="main-button-color js-button" data-target="registration-to-event">
+                                    <span class="text">принять участие</span>
+                                </button>
+                                <div class="general-communication-btn__container">
+                                    <button class="general-communication-btn js-drop-button">
+                                        <span class="icon-comment"></span>
+                                        <span class="text">Комментарии (1)</span>
+                                    </button>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="general-communication-btn js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                            <span class="text">поделиться</span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews-block">
+                                <div class="reviews-block__add">
+                                    <p class="reviews-block__caption">Добавить комментарий</p>
+                                    <div class="people__wrapper">
+                                        <div class="people__info__img" v-lazy:background-image="'./img/people-img-1.png'"></div>
+                                        <div class="people__info">
+                                            <p class="people__info__name">Artem Voloshin</p>
+                                            <p class="people__info__description">Руководитель отдела продаж</p>
+                                        </div>
+                                    </div>
+                                    <form class="reviews-block__form js-reviews-form">
+                                        <label class="input__wrapper input__wrapper--textarea js-input-wrapper">
+                                            <textarea class="main-input main-input--textarea js-input"></textarea>
+                                            <span class="custome-placeholder__wrapper">
+                                                <span class="custome-placeholder__before"></span>
+                                                <span class="custome-placeholder__text">
+                                                    <span class="inner-text">Комментарий</span>
+                                                </span>
+                                                <span class="custome-placeholder__after"></span>
+                                            </span>
+                                        </label>
+                                        <label class="reviews-block__add-photo">
+                                            <span class="icon-add-reviews"></span>
+                                            <input class="js-add-photo" type="file" multiple>
+                                        </label>
+                                        <ul class="reviews-block__photo-list js-photo-list">
+                                        </ul>
+                                        <button class="main-button main-button--reviews">
+                                            <span class="text">опубликовать</span>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="reviews-block__container">
+                                    <p class="reviews-block__caption">Комментарии (1)</p>
+                                    <ul class="reviews__list">
+                                        <li class="reviews__item js-drop-item">
+                                            <div class="reviews__item__header">
+                                                <div class="people__wrapper">
+                                                    <div class="people__info__img" v-lazy:background-image="'./img/people-img-1.png'"></div>
+                                                    <div class="people__info">
+                                                        <p class="people__info__name">Artem Voloshin</p>
+                                                        <p class="people__info__description">Руководитель отдела продаж</p>
+                                                    </div>
+                                                </div>
+                                                <p class="reviews__item__time">12.06.2020 17:47</p>
+                                            </div>
+                                            <div class="reviews__item__body">
+                                                <p>Равным образом дальнейшее развитие различных форм деятельности играет важную роль в формировании существенных финансовых и административных условий.</p>
+                                            </div>
+                                            <ul class="reviews-block__photo-list">
+                                                <li class="reviews-block__photo-item" v-lazy:background-image="'./img/offers-img-3.png'"></li>
+                                            </ul>
+                                            <div class="reviews__item__footer">
+                                                <div class="reviews__item__buttons js-drop-item">
+                                                    <div class="reviews__item__buttons__container">
+                                                        <button class="text-button reviews__item__btn-answer js-drop-button">
+                                                            <span class="icon-answer"></span>
+                                                            <span class="text">ответить</span>
+                                                        </button>
+                                                        <button class="reviews__item__btn-like">
+                                                            <span class="icon-like"></span>
+                                                            <span class="number">1</span>
+                                                        </button>
+                                                        <button class="reviews__item__btn-like">
+                                                            <span class="icon-dislike"></span>
+                                                            <span class="number">0</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="reviews-block__add">
+                                                        <div class="people__wrapper">
+                                                            <div class="people__info__img" v-lazy:background-image="'./img/people-img-1.png'"></div>
+                                                            <div class="people__info">
+                                                                <p class="people__info__name">Artem Voloshin</p>
+                                                                <p class="people__info__description">Руководитель отдела продаж</p>
+                                                            </div>
+                                                        </div>
+                                                        <form class="reviews-block__form js-reviews-form">
+                                                            <label class="input__wrapper input__wrapper--textarea js-input-wrapper">
+                                                                <textarea class="main-input main-input--textarea js-input"></textarea>
+                                                                <span class="custome-placeholder__wrapper">
+                                                                    <span class="custome-placeholder__before"></span>
+                                                                    <span class="custome-placeholder__text">
+                                                                        <span class="inner-text">Ваш ответ</span>
+                                                                    </span>
+                                                                    <span class="custome-placeholder__after"></span>
+                                                                </span>
+                                                            </label>
+                                                            <label class="reviews-block__add-photo">
+                                                                <span class="icon-add-reviews"></span>
+                                                                <input class="js-add-photo" type="file" multiple>
+                                                            </label>
+                                                            <ul class="reviews-block__photo-list js-photo-list"></ul>
+                                                            <div class="reviews-block__form__btn">
+                                                                <button class="text-button js-drop-button">отмена</button>
+                                                                <button class="main-button main-button--reviews">
+                                                                    <span class="text">ответить</span>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="text-button reviews__item__show-answer js-drop-button">
+                                                <span class="show">показать 3 ответа</span>
+                                                <span class="close">скрыть 3 ответа</span>
+                                            </button>
+                                            <ul class="reviews__list">
+                                                <li class="reviews__item">
+                                                    <div class="reviews__item__header">
+                                                        <div class="people__wrapper">
+                                                            <div class="people__info__img" v-lazy:background-image="'./img/people-img-1.png'"></div>
+                                                            <div class="people__info">
+                                                                <p class="people__info__name">Artem Voloshin</p>
+                                                                <p class="people__info__description">Руководитель отдела продаж</p>
+                                                            </div>
+                                                        </div>
+                                                        <p class="reviews__item__time">12.06.2020 17:47</p>
+                                                    </div>
+                                                    <div class="reviews__item__body">
+                                                        <p>Равным образом дальнейшее развитие различных форм деятельности играет важную роль в формировании существенных финансовых и административных условий.</p>
+                                                    </div>
+                                                    <ul class="reviews-block__photo-list">
+                                                        <li class="reviews-block__photo-item" v-lazy:background-image="'./img/offers-img-3.png'"></li>
+                                                    </ul>
+                                                    <div class="reviews__item__footer js-drop-item">
+                                                        <div class="reviews__item__buttons js-drop-item">
+                                                            <div class="reviews__item__buttons__container">
+                                                                <button class="reviews__item__btn-like">
+                                                                    <span class="icon-like"></span>
+                                                                    <span class="number">1</span>
+                                                                </button>
+                                                                <button class="reviews__item__btn-like">
+                                                                    <span class="icon-dislike"></span>
+                                                                    <span class="number">0</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="reviews__item">
+                                                    <div class="reviews__item__header">
+                                                        <div class="people__wrapper">
+                                                            <div class="people__info__img" v-lazy:background-image="'./img/people-img-1.png'"></div>
+                                                            <div class="people__info">
+                                                                <p class="people__info__name">Artem Voloshin</p>
+                                                                <p class="people__info__description">Руководитель отдела продаж</p>
+                                                            </div>
+                                                        </div>
+                                                        <p class="reviews__item__time">12.06.2020 17:47</p>
+                                                    </div>
+                                                    <div class="reviews__item__body">
+                                                        <p>Равным образом дальнейшее развитие различных форм деятельности играет важную роль в формировании существенных финансовых и административных условий.Равным образом дальнейшее развитие различных форм деятельности играет важную роль в формировании существенных финансовых и административных условий.</p>
+                                                    </div>
+                                                    <div class="reviews__item__footer js-drop-item">
+                                                        <div class="reviews__item__buttons js-drop-item">
+                                                            <div class="reviews__item__buttons__container">
+                                                                <button class="reviews__item__btn-like">
+                                                                    <span class="icon-like"></span>
+                                                                    <span class="number">1</span>
+                                                                </button>
+                                                                <button class="reviews__item__btn-like">
+                                                                    <span class="icon-dislike"></span>
+                                                                    <span class="number">0</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-page__events">
+                            <p class="event-page__sub-caption">Другие мероприятия от этого организатора</p>
+                            <ul class="events__list">
+                                <li class="events__item">
+                                    <div class="events__item__img">
+                                        <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                                    </div>
+                                    <div class="events__item__header">
+                                        <div class="events__item__date">
+                                            <span class="icon-calendar"></span>
+                                            <p class="text">24.07.2020</p>
+                                        </div>
+                                        <button class="add-to-favorite"><span class="icon-favorite-line"></span></button>
+                                    </div>
+                                    <div class="events__item__place">
+                                        <span class="icon-place"></span>
+                                        <p class="text">Одесса</p>
+                                    </div>
+                                    <a href="#" class="events__item__name">Внутренний аудит</a>
+                                    <p class="events__item__sub-info">Good school, учебный центр</p>
+                                    <div class="events__item__footer">
+                                        <a href="#" class="events__item__type">Бизнес</a>
+                                        <div class="events__item__price">
+                                            <p class="events__item__price-old">1700 грн</p>
+                                            <p class="events__item__price-current">1500 грн</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="events__item">
+                                    <div class="events__item__img">
+                                        <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                                    </div>
+                                    <div class="events__item__header">
+                                        <div class="events__item__date">
+                                            <span class="icon-calendar"></span>
+                                            <p class="text">24.07.2020</p>
+                                        </div>
+                                        <button class="add-to-favorite"><span class="icon-favorite-line"></span></button>
+                                    </div>
+                                    <div class="events__item__place">
+                                        <span class="icon-place"></span>
+                                        <p class="text">Одесса</p>
+                                    </div>
+                                    <a href="#" class="events__item__name">Внутренний аудит</a>
+                                    <p class="events__item__sub-info">Good school, учебный центр</p>
+                                    <div class="events__item__footer">
+                                        <a href="#" class="events__item__type">Бизнес</a>
+                                        <div class="events__item__price">
+                                            <p class="events__item__price-old">1700 грн</p>
+                                            <p class="events__item__price-current">1500 грн</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="events__item">
+                                    <div class="events__item__img">
+                                        <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                                    </div>
+                                    <div class="events__item__header">
+                                        <div class="events__item__date">
+                                            <span class="icon-calendar"></span>
+                                            <p class="text">24.07.2020</p>
+                                        </div>
+                                        <button class="add-to-favorite"><span class="icon-favorite-line"></span></button>
+                                    </div>
+                                    <div class="events__item__place">
+                                        <span class="icon-place"></span>
+                                        <p class="text">Одесса</p>
+                                    </div>
+                                    <a href="#" class="events__item__name">Внутренний аудит</a>
+                                    <p class="events__item__sub-info">Good school, учебный центр</p>
+                                    <div class="events__item__footer">
+                                        <a href="#" class="events__item__type">Бизнес</a>
+                                        <div class="events__item__price">
+                                            <p class="events__item__price-old">1700 грн</p>
+                                            <p class="events__item__price-current">1500 грн</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="text-button">смотреть все</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="events events--slider">
+                <div class="general-header container">
+                    <p class="main-caption-m">Популярные мероприятия </p>
+                    <a href="#" class="text-button">смотреть все</a>
+                </div>
+                <div class="events__wrapper js-move-wrapper">
+                    <ul class="events__list js-move-list">
+                        <li class="events__item js-move-item">
+                            <div class="events__item__img">
+                                <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                            </div>
+                            <div class="events__item__header">
+                                <div class="events__item__date">
+                                    <span class="icon-calendar"></span>
+                                    <p class="text">24.07.2020</p>
+                                </div>
+                                <button class="add-to-favorite"><span class="icon-favorite-line"></span></button>
+                            </div>
+                            <div class="events__item__place">
+                                <span class="icon-place"></span>
+                                <p class="text">Одесса</p>
+                            </div>
+                            <a href="#" class="events__item__name">Внутренний аудит</a>
+                            <p class="events__item__sub-info">Good school, учебный центр</p>
+                            <div class="events__item__footer">
+                                <a href="#" class="events__item__type">Бизнес</a>
+                                <div class="events__item__price">
+                                    <p class="events__item__price-old">1700 грн</p>
+                                    <p class="events__item__price-current">1500 грн</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="events__item js-move-item">
+                            <div class="events__item__img">
+                                <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                            </div>
+                            <div class="events__item__header">
+                                <div class="events__item__date">
+                                    <span class="icon-calendar"></span>
+                                    <p class="text">24.07.2020</p>
+                                </div>
+                                <button class="add-to-favorite"><span class="icon-favorite-line"></span></button>
+                            </div>
+                            <div class="events__item__place">
+                                <span class="icon-place"></span>
+                                <p class="text">Одесса</p>
+                            </div>
+                            <a href="#" class="events__item__name">Внутренний аудит</a>
+                            <p class="events__item__sub-info">Good school, учебный центр</p>
+                            <div class="events__item__footer">
+                                <a href="#" class="events__item__type">Бизнес</a>
+                                <div class="events__item__price">
+                                    <p class="events__item__price-old">1700 грн</p>
+                                    <p class="events__item__price-current">1500 грн</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="events__item js-move-item">
+                            <div class="events__item__img">
+                                <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                            </div>
+                            <div class="events__item__header">
+                                <div class="events__item__date">
+                                    <span class="icon-calendar"></span>
+                                    <p class="text">24.07.2020</p>
+                                </div>
+                                <button class="add-to-favorite"><span class="icon-favorite-line"></span></button>
+                            </div>
+                            <div class="events__item__place">
+                                <span class="icon-place"></span>
+                                <p class="text">Одесса</p>
+                            </div>
+                            <a href="#" class="events__item__name">Внутренний аудит</a>
+                            <p class="events__item__sub-info">Good school, учебный центр</p>
+                            <div class="events__item__footer">
+                                <a href="#" class="events__item__type">Бизнес</a>
+                                <div class="events__item__price">
+                                    <p class="events__item__price-old">1700 грн</p>
+                                    <p class="events__item__price-current">1500 грн</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="events__item js-move-item">
+                            <div class="events__item__img">
+                                <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                            </div>
+                            <div class="events__item__header">
+                                <div class="events__item__date">
+                                    <span class="icon-calendar"></span>
+                                    <p class="text">24.07.2020</p>
+                                </div>
+                                <button class="add-to-favorite"><span class="icon-favorite-line"></span></button>
+                            </div>
+                            <div class="events__item__place">
+                                <span class="icon-place"></span>
+                                <p class="text">Одесса</p>
+                            </div>
+                            <a href="#" class="events__item__name">Внутренний аудит</a>
+                            <p class="events__item__sub-info">Good school, учебный центр</p>
+                            <div class="events__item__footer">
+                                <a href="#" class="events__item__type">Финансы</a>
+                                <div class="events__item__price">
+                                    <p class="events__item__price-current">1500 грн</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="events__item js-move-item">
+                            <div class="events__item__img">
+                                <img v-lazy="'./img/events-img-1.png'" alt="Title">
+                            </div>
+                            <div class="events__item__header">
+                                <div class="events__item__date">
+                                    <span class="icon-calendar"></span>
+                                    <p class="text">24.07.2020</p>
+                                </div>
+                                <button class="add-to-favorite"><span class="icon-favorite-line"></span></button>
+                            </div>
+                            <div class="events__item__place">
+                                <span class="icon-place"></span>
+                                <p class="text">Одесса</p>
+                            </div>
+                            <a href="#" class="events__item__name">Внутренний аудит</a>
+                            <p class="events__item__sub-info">Good school, учебный центр</p>
+                            <div class="events__item__footer">
+                                <a href="#" class="events__item__type">Бизнес</a>
+                                <div class="events__item__price">
+                                    <p class="events__item__price-old">1700 грн</p>
+                                    <p class="events__item__price-current">1500 грн</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-show-more container">
+                    <a href="#" class="button-border button-border--position-center">
+                        <span class="text">смотреть все</span>
+                    </a>
+                </div>
+            </section>
+            <section class="social-block">
+                <div class="social-block__wrapper container">
+                    <p class="main-caption-m main-caption-m--center">Следите за нами в социальных сетях</p>
+                    <ul class="social-block__list">
+                        <li class="social-block__item">
+                            <a href="#" class="social-block__link">
+                                <span class="icon-fb"></span>
+                            </a>
+                        </li>
+                        <li class="social-block__item">
+                            <a href="#" class="social-block__link">
+                                <span class="icon-inst"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="subscribe" v-lazy:background-image="'./img/subscribe-bg.png'">
+                <div class="subscribe__wrapper container">
+                    <p class="main-caption-m main-caption-m--center subscribe__caption">Подпишитесь на нашу рассылку</p>
+                    <p class="subscribe__sub-info">Выберите тему, на которую вам будет интересно получать от нас рассылку</p>
+                    <button class="subscribe__button js-button" data-target="subscribe-category">Выбрать темы</button>
+                    <ul class="subscribe-selected__list">
+                        <li class="subscribe-selected__item">
+                            <span class="text">Финансы</span>
+                            <button class="subscribe-selected__item__delete">
+                                <span class="icon-close"></span>
+                            </button>
+                        </li>
+                        <li class="subscribe-selected__item">
+                            <span class="text">Маркетинг</span>
+                            <button class="subscribe-selected__item__delete">
+                                <span class="icon-close"></span>
+                            </button>
+                        </li>
+                        <li class="subscribe-selected__item">
+                            <span class="text">Аудит</span>
+                            <button class="subscribe-selected__item__delete">
+                                <span class="icon-close"></span>
+                            </button>
+                        </li>
+                    </ul>
+                    <form action="#" class="subscribe__form">
+                        <label class="input__wrapper input__wrapper--light subscribe__input__wrapper js-input-wrapper">
+                            <input type="email" class="main-input js-input">
+                            <span class="custome-placeholder__wrapper">
+                                <span class="custome-placeholder__before"></span>
+                                <span class="custome-placeholder__text">
+                                    <span class="inner-text">Email <span>*</span></span>
+                                </span>
+                                <span class="custome-placeholder__after"></span>
+                            </span>
+                        </label>
+                        <button class="main-button-color">подписаться</button>
+                    </form>
+                </div>
+                <section class="popup popup-filter js-popup" data-target="subscribe-category">
+                    <button class="close__popup js-close">
+                        <span class="icon-close"></span>
+                    </button>
+                    <div class="popup__wrapper">
+                        <ul class="filter-popup__list">
+                            <li class="filter-popup__item">
+                                <p class="filter-popup__item__caption">Выберите интересующие вас темы</p>
+                                <ul class="filter-popup-selected__list">
+                                    <li class="filter-popup-selected__item">
+                                        <span class="text">Финансы</span>
+                                        <span class="icon-close"></span>
+                                    </li>
+                                    <li class="filter-popup-selected__item">
+                                        <span class="text">Маркетинг</span>
+                                        <span class="icon-close"></span>
+                                    </li>
+                                </ul>
+                                <ul class="filter-popup-choose__list">
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="popup-filter__buttons">
+                            <button class="text-button js-close">отмена</button>
+                            <button class="main-button">
+                                <span class="text">готово</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__wrapper container">
+                <div class="footer-info footer-info--category">
+                    <div class="footer-info__item-wrapper js-drop-item js-footer-info-item">
+                        <button class="footer-info__caption js-drop-button">
+                            <span>Регионы</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Киев</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Харьков</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Львов</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Одесса</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Днепр</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Херсон</a>
+                            </li>
+                        </ul>
+                        <button class="footer-info__button-more js-drop-button js-footer-info-button">
+                            <span class="text">Все регионы</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                    </div>
+                    <div class="footer-info__item-wrapper js-drop-item js-footer-info-item">
+                        <button class="footer-info__caption js-drop-button">
+                            <span>Темы мероприятий</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Финансы</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Бизнес</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Маркетинг</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Туризм</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Охрана труда</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Логистика</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Охрана труда</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Логистика</a>
+                            </li>
+                        </ul>
+                        <button class="footer-info__button-more js-drop-button js-footer-info-button">
+                            <span class="text">Все регионы</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                    </div>
+                    <div class="footer-info__item-wrapper js-drop-item js-footer-info-item">
+                        <button class="footer-info__caption js-drop-button">
+                            <span>О портале</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Мероприятия</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Организаторы</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Тренеры</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Статьи</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Добавить мероприятие</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Стать партнером</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Статьи</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Добавить мероприятие</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Стать партнером</a>
+                            </li>
+                        </ul>
+                        <button class="footer-info__button-more js-drop-button js-footer-info-button">
+                            <span class="text">Все регионы</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="footer-info footer-info--call-back">
+                    <div class="footer-info__item-wrapper">
+                        <p class="footer-info__caption">По вопросам рекламы:</p>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item">
+                                <a href="tel: +38 095 27 27 277" class="footer-info__link">+38 095 27 27 277</a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="tel: +38 095 27 27 655" class="footer-info__link">+38 095 27 27 655</a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="mailto: emal@email.com" class="footer-info__link">emal@email.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-info__item-wrapper">
+                        <p class="footer-info__caption">Общие вопросы:</p>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item">
+                                <a href="tel: +38 095 27 27 277" class="footer-info__link">+38 095 27 27 277</a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="tel: +38 095 27 27 655" class="footer-info__link">+38 095 27 27 655</a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="mailto: emal@email.com" class="footer-info__link">emal@email.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-info__item-wrapper footer-info__item-wrapper--social">
+                        <p class="footer-info__caption">Социальные сети:</p>
+                        <ul class="footer-info__list footer-info__list--social">
+                            <li class="footer-info__item">
+                                <a href="#" class="footer-info__link">
+                                    <span class="icon-fb"></span>
+                                </a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="#" class="footer-info__link">
+                                    <span class="icon-inst"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-down">
+                <div class="footer-down__wrapper container">
+                    <p class="footer-down__copyright">© 2020 spektor</p>
+                    <a href="#" class="footer-down__link">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </footer>
+        <section class="popup popup--people js-popup" data-target="people">
+            <button class="close__popup js-close">
+                <span class="icon-close"></span>
+            </button>
+            <div class="popup__wrapper">
+                <p class="popup__caption">Участники</p>
+                <div class="general-tabs-wrapper">
+                    <ul class="general-tabs-list">
+                        <li class="general-tabs-item active">Участвуют (5)</li>
+                        <li class="general-tabs-item">Планируют участие (5)</li>
+                    </ul>
+                </div>
+                <ul class="people__popup-list">
+                        <li class="people__popup-item">
+                            <div class="people__wrapper">
+                                <div class="people__info__img" v-lazy:background-image="'./img/people-img-1.png'"></div>
+                                <div class="people__info">
+                                    <p class="people__info__name">Artem Voloshin</p>
+                                    <p class="people__info__description">Руководитель отдела продаж</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="people__popup-item">
+                            <div class="people__wrapper">
+                                <div class="people__info__img" v-lazy:background-image="'./img/people-img-1.png'"></div>
+                                <div class="people__info">
+                                    <p class="people__info__name">Artem Voloshin</p>
+                                    <p class="people__info__description">Руководитель отдела продаж</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="people__popup-item">
+                            <div class="people__wrapper">
+                                <div class="people__info__img" v-lazy:background-image="'./img/people-img-1.png'"></div>
+                                <div class="people__info">
+                                    <p class="people__info__name">Artem Voloshin</p>
+                                    <p class="people__info__description">Руководитель отдела продаж</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+        </section>
+        <section class="popup popup--registration-to-event js-popup" data-target="registration-to-event">
+            <button class="close__popup js-close">
+                <span class="icon-close"></span>
+            </button>
+            <div class="popup__wrapper">
+                <p class="popup__caption">Принять участие</p>
+                <div class="registration-to-event__decription">
+                    <p class="registration-to-event__name">Презентация среднеобразовательной школы IT Step School</p>
+                    <p class="registration-to-event__sub-info">“Шаг” компьютерная акдемия</p>
+                    <div class="registration-to-event__date">
+                        <span class="icon-calendar"></span>
+                        <span class="text">24.07.2020-27.07.2020</span>
+                    </div>
+                    <div class="registration-to-event__place">
+                        <span class="icon-place"></span>
+                        <span class="text">“Шаг” компьютерная академия, Днепр</span>
+                    </div>
+                </div>
+                <form action="#" class="registration-to-event__form">
+                    <label class="input__wrapper js-input-wrapper">
+                        <input type="text" class="main-input js-input">
+                        <span class="custome-placeholder__wrapper">
+                            <span class="custome-placeholder__before"></span>
+                            <span class="custome-placeholder__text">
+                                <span class="inner-text">Имя</span>
+                            </span>
+                            <span class="custome-placeholder__after"></span>
+                        </span>
+                    </label>
+                    <label class="input__wrapper js-input-wrapper">
+                        <input type="text" class="main-input js-input">
+                        <span class="custome-placeholder__wrapper">
+                            <span class="custome-placeholder__before"></span>
+                            <span class="custome-placeholder__text">
+                                <span class="inner-text">Фамилия</span>
+                            </span>
+                            <span class="custome-placeholder__after"></span>
+                        </span>
+                    </label>
+                    <label class="input__wrapper js-input-wrapper">
+                        <input type="text" class="main-input js-input">
+                        <span class="custome-placeholder__wrapper">
+                            <span class="custome-placeholder__before"></span>
+                            <span class="custome-placeholder__text">
+                                <span class="inner-text">Ваша текущая  должность</span>
+                            </span>
+                            <span class="custome-placeholder__after"></span>
+                        </span>
+                    </label>
+                    <label class="input__wrapper js-input-wrapper">
+                        <input type="email" class="main-input js-input">
+                        <span class="custome-placeholder__wrapper">
+                            <span class="custome-placeholder__before"></span>
+                            <span class="custome-placeholder__text">
+                                <span class="inner-text">Email</span>
+                            </span>
+                            <span class="custome-placeholder__after"></span>
+                        </span>
+                    </label>
+                    <label class="input__wrapper js-input-wrapper">
+                        <input type="tel" class="main-input js-input">
+                        <span class="custome-placeholder__wrapper">
+                            <span class="custome-placeholder__before"></span>
+                            <span class="custome-placeholder__text">
+                                <span class="inner-text">Телефон</span>
+                            </span>
+                            <span class="custome-placeholder__after"></span>
+                        </span>
+                    </label>
+                    <div class="registration-to-event__anonymous">
+                        <label class="checkbox__wrapper">
+                            <input type="checkbox" value="Сохранить ананимность" class="input-checkbox">
+                            <span class="custom-check">
+                                <span class="icon-active"></span>
+                            </span>
+                            <span class="text">Сохранить ананимность</span>
+                        </label>
+                        <div class="general-drop js-drop-item general-drop--info">
+                            <button class="general-drop-button info-button js-drop-button">
+                                <span class="text">i</span>
+                            </button>
+                            <div class="general-drop-wrapper">
+                                <p>Это означает, что ваши данные не будут отображаться в списке участников</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="registration-to-event__price">
+                        <span>Цена:</span>
+                        <p class="event-page__price-old">1700 грн</p> 
+                        <p class="event-page__price-current">1500 грн</p>
+                        <p class="registration-to-event__price__info">-5% дарит вам Spektor</p>
+                    </div>
+                    <button class="main-button-color main-button-color--center">
+                        <span class="text">оплатить участие</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="popup popup--thanks js-popup" data-target="people">
+            <button class="close__popup js-close">
+                <span class="icon-close"></span>
+            </button>
+            <div class="popup__wrapper">
+                <p>🎉</p>
+                <p class="popup__caption">Поздравляем!</p>
+                <p class="popup--thanks__text">Теперь вы участник мероприятия “Презентация среднеобразовательной школы IT Step School”</p>
+            </div>
+        </section>
+        <div class="overlay"></div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/event-page.js"></script>
+</body>
+</html>

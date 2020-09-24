@@ -1,13 +1,12 @@
 Vue.use(VueLazyload)
-
-import {listMove} from './mixin/moveLists.js'
+import {sliderOneCard} from './mixin/sliderOneCard.js'
 
 const app = new Vue({
     el: "#app",
     data: {
         windowWidth: 0,
     },
-    mixins: [listMove],
+    mixins: [sliderOneCard],
     methods: {
     },
     components: {
@@ -22,7 +21,6 @@ const app = new Vue({
         });
         
         setTimeout(() =>{
-            this.moveElements();
             this.initialSlider();
         },1000);
     }

@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spektor</title>
+    <link rel="stylesheet" href="./css/mainNews.css">
+</head>
+<body>
+    <section id="app">
+        <header class="header">
+            <div class="header__wrapper container">
+                <div class="header__logo">
+                    <img class="header__logo__img" src="./img/logo.png" alt="Spektor">
+                    <p class="header__logo__text">spektor</p>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Мероприятия</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Организаторы</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Тренеры</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Услуги сайта</a>
+                        </li>
+                        <li class="header__menu-item general-drop js-drop-item">
+                            <button class="general-drop-button  js-drop-button">
+                                <span class="text">Еще</span>
+                                <span class="icon-drop"></span>
+                            </button>
+                            <div class="general-drop-wrapper general-drop-wrapper--text">
+                                <ul class="general-drop-list">
+                                    <li class="general-drop-item">
+                                        <a href="#" class="general-drop-link">Список</a>
+                                    </li>
+                                    <li class="general-drop-item">
+                                        <a href="#" class="general-drop-link">Список1</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__profile">
+                    <a href="#" class="header__profile__button">
+                        <span class="icon-favorite"></span>
+                        <span class="text">Избранное</span>
+                    </a>
+                    <a href="#" class="header__profile__button">
+                        <span class="icon-account"></span>
+                        <span class="text">Войти</span>
+                    </a>
+                </div>
+                <button class="header-burger js-button js-header-burger" data-target="burger">
+                    <span class="decor"></span>
+                </button>
+                <div class="general-drop js-drop-item">
+                    <button class="general-drop-button button-border button-border--header header__create-post js-drop-button">
+                        <span class="text">создать запись</span>
+                        <span class="icon-drop"></span>
+                    </button>
+                    <div class="general-drop-wrapper general-drop-wrapper--text">
+                        <ul class="general-drop-list">
+                            <li class="general-drop-item">
+                                <a href="#" class="general-drop-link">Опубликовать мероприятие</a>
+                            </li>
+                            <li class="general-drop-item">
+                                <a href="#" class="general-drop-link">Опубликовать статью</a>
+                            </li>
+                            <li class="general-drop-item">
+                                <a href="#" class="general-drop-link">Создать рекламу</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="header__burder-wrapper js-popup" data-target="burger">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Мероприятия</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Организаторы</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Тренеры</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Услуги сайта</a>
+                    </li>
+                </ul>
+                <div class="header__profile">
+                    <a href="#" class="header__profile__button">
+                        <span class="icon-favorite"></span>
+                        <span class="text">Избранное</span>
+                    </a>
+                    <a href="#" class="header__profile__button">
+                        <span class="icon-account"></span>
+                        <span class="text">Войти</span>
+                    </a>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="breadcrumbs">
+                <div class="breadcrumbs__wrapper container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">Новости и статьи</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="news-page">
+                <div class="news-page__wrapper container">
+                    <p class="news-page__caption main-caption-m">Новости и статьи</p>
+                    <div class="general-tabs-wrapper">
+                        <ul class="general-tabs-list">
+                            <li class="general-tabs-item active">Все новости и статьи</li>
+                            <li class="general-tabs-item">Новости</li>
+                            <li class="general-tabs-item">Бизнес</li>
+                            <li class="general-tabs-item">Маркетинг</li>
+                            <li class="general-tabs-item">Коммуникации</li>
+                            <li class="general-tabs-item">Логистика</li>
+                            <li class="general-tabs-item">Охрана труда</li>
+                            <li class="general-tabs-item">Туризм</li>
+                            <li class="general-tabs-item general-drop js-drop-item">
+                                <button class="general-drop-button js-drop-button">
+                                    <span class="text">Еще</span>
+                                    <span class="icon-drop"></span>
+                                </button>
+                                <div class="general-drop-wrapper general-drop-wrapper--text">
+                                    <ul class="general-drop-list">
+                                        <li class="general-drop-item">
+                                            <a href="#" class="general-drop-link">Список</a>
+                                        </li>
+                                        <li class="general-drop-item">
+                                            <a href="#" class="general-drop-link">Список1</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news-page__header">
+                        <div class="news-page__hashtag">
+                            <p>Популярные теги:</p>
+                            <ul class="news__hashtag-list">
+                                <li class="news__hashtag-item">
+                                    <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                </li>
+                                <li class="news__hashtag-item">
+                                    <a class="news__hashtag-link" href="#">#job</a>
+                                </li>
+                                <li class="news__hashtag-item">
+                                    <a class="news__hashtag-link" href="#">#money</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="news-page__search">
+                            <form action="#" class="news-page__search__form">
+                                <button class="news-page__search__button">
+                                    <span class="icon-search"></span>
+                                </button>
+                                <input type="text" class="news-page__search__input" placeholder="Поиск новостей и статей">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="news">
+                <div class="news__wrapper container">
+                    <div class="news__container">
+                        <div class="news__slider js-slider">
+                            <div class="news__slider__header">
+                                <p class="news__slider__number js-calc-slider"></p>
+                                <div class="general-slider-button-wrapper js-arrows">
+                                    <button class="general-slider-button js-prev">
+                                        <span class="icon-arrow-left"></span>
+                                    </button>
+                                    <button class="general-slider-button general-slider-button--progress js-next">
+                                        <span class="icon-arrow-right"></span>
+                                        <svg class="progress-circle">
+                                            <circle cx="16" cy="16" r="16"></circle>
+                                            <circle class="js-progress-line" cx="16" cy="16" r="16"></circle>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <ul class="news__list news__list--slider">
+                                <li class="news__item js-slider-item show" data-index="1">
+                                    <p class="news__item__type">Маркетинг</p>
+                                    <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                    <ul class="news__hashtag-list">
+                                        <li class="news__hashtag-item">
+                                            <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                        </li>
+                                        <li class="news__hashtag-item">
+                                            <a class="news__hashtag-link" href="#">#job</a>
+                                        </li>
+                                        <li class="news__hashtag-item">
+                                            <a class="news__hashtag-link" href="#">#money</a>
+                                        </li>
+                                    </ul>
+                                    <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                    <div class="news__item__text"><p>Переговоры мы ведем часто по разным поводам. Большую часть внимания и усилий в переговорах мы инстинктивно уделяем содержанию и фактам. Но практика показывает, что результат больше больше работать со </p></div>
+                                    <div class="news__item__footer">
+                                        <p class="news__item__description">Good school, учебный центр</p>
+                                       <div class="general-drop js-drop-item">
+                                            <button class="news__item__social-button js-drop-button">
+                                                <span class="icon-more-social"></span>
+                                            </button>
+                                            <div class="general-drop-wrapper">
+                                                <ul class="general-social-list">
+                                                    <li class="general-social-item general-social-item--fb">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-fb"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--message">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-message"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--teleg">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-teleg"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--whats-app">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-whats-app"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--twiter">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-twiter"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--viber">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-viber"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="news__item js-slider-item" data-index="2">
+                                    <p class="news__item__type">Маркетинг</p>
+                                    <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                    <ul class="news__hashtag-list">
+                                        <li class="news__hashtag-item">
+                                            <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                        </li>
+                                        <li class="news__hashtag-item">
+                                            <a class="news__hashtag-link" href="#">#job</a>
+                                        </li>
+                                        <li class="news__hashtag-item">
+                                            <a class="news__hashtag-link" href="#">#money</a>
+                                        </li>
+                                    </ul>
+                                    <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                    <div class="news__item__text"><p>Переговоры мы ведем часто по разным поводам. Большую часть внимания и усилий в переговорах мы инстинктивно уделяем содержанию и фактам. Но практика показывает, что результат больше больше работать со </p></div>
+                                    <div class="news__item__footer">
+                                        <p class="news__item__description">Good school, учебный центр</p>
+                                       <div class="general-drop js-drop-item">
+                                            <button class="news__item__social-button js-drop-button">
+                                                <span class="icon-more-social"></span>
+                                            </button>
+                                            <div class="general-drop-wrapper">
+                                                <ul class="general-social-list">
+                                                    <li class="general-social-item general-social-item--fb">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-fb"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--message">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-message"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--teleg">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-teleg"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--whats-app">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-whats-app"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--twiter">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-twiter"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="general-social-item general-social-item--viber">
+                                                        <a href="#" class="general-social-link">
+                                                            <span class="icon-viber"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="news__list news__list--container-list">
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="position-wrapper">
+                        <ul class="news__list news__list--page-news">
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="button-border button-border--position-center">
+                    <span class="text">загрузить ещё</span>
+                </button>
+            </section>
+            <section class="popular__news">
+                <div class="popular__news__wrapper container">
+                    <p class="main-caption-s popular__news__caption">Популярное на Spektor</p>
+                    <div class="position-wrapper">
+                        <ul class="news__list">
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="news__item">
+                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
+                                <p class="news__item__type">Маркетинг</p>
+                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
+                                <ul class="news__hashtag-list">
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#job</a>
+                                    </li>
+                                    <li class="news__hashtag-item">
+                                        <a class="news__hashtag-link" href="#">#money</a>
+                                    </li>
+                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
+                                </ul>
+                                <div class="news__item__footer">
+                                    <p class="news__item__description">Good school, учебный центр</p>
+                                    <div class="general-drop js-drop-item">
+                                        <button class="news__item__social-button js-drop-button">
+                                            <span class="icon-more-social"></span>
+                                        </button>
+                                        <div class="general-drop-wrapper">
+                                            <ul class="general-social-list">
+                                                <li class="general-social-item general-social-item--fb">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-fb"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--message">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-message"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--teleg">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-teleg"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="general-social-item general-social-item--whats-app">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-whats-app"></span>
+                                                    </a>
+                                                </li>
+                                                <!-- <li class="general-social-item general-social-item--twiter">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-twiter"></span>
+                                                    </a>
+                                                </li> -->
+                                                <li class="general-social-item general-social-item--viber">
+                                                    <a href="#" class="general-social-link">
+                                                        <span class="icon-viber"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe" v-lazy:background-image="'./img/subscribe-bg.png'">
+                <div class="subscribe__wrapper container">
+                    <p class="main-caption-m main-caption-m--center subscribe__caption">Подпишитесь на нашу рассылку</p>
+                    <p class="subscribe__sub-info">Выберите тему, на которую вам будет интересно получать от нас рассылку</p>
+                    <button class="subscribe__button js-button" data-target="subscribe-category">Выбрать темы</button>
+                    <ul class="subscribe-selected__list">
+                        <li class="subscribe-selected__item">
+                            <span class="text">Финансы</span>
+                            <button class="subscribe-selected__item__delete">
+                                <span class="icon-close"></span>
+                            </button>
+                        </li>
+                        <li class="subscribe-selected__item">
+                            <span class="text">Маркетинг</span>
+                            <button class="subscribe-selected__item__delete">
+                                <span class="icon-close"></span>
+                            </button>
+                        </li>
+                        <li class="subscribe-selected__item">
+                            <span class="text">Аудит</span>
+                            <button class="subscribe-selected__item__delete">
+                                <span class="icon-close"></span>
+                            </button>
+                        </li>
+                    </ul>
+                    <form action="#" class="subscribe__form">
+                        <label class="input__wrapper input__wrapper--light subscribe__input__wrapper js-input-wrapper">
+                            <input type="email" class="main-input js-input">
+                            <span class="custome-placeholder__wrapper">
+                                <span class="custome-placeholder__before"></span>
+                                <span class="custome-placeholder__text">
+                                    <span class="inner-text">Email <span>*</span></span>
+                                </span>
+                                <span class="custome-placeholder__after"></span>
+                            </span>
+                        </label>
+                        <button class="main-button-color">подписаться</button>
+                    </form>
+                </div>
+                <section class="popup popup-filter js-popup" data-target="subscribe-category">
+                    <button class="close__popup js-close">
+                        <span class="icon-close"></span>
+                    </button>
+                    <div class="popup__wrapper">
+                        <ul class="filter-popup__list">
+                            <li class="filter-popup__item">
+                                <p class="filter-popup__item__caption">Выберите интересующие вас темы</p>
+                                <ul class="filter-popup-selected__list">
+                                    <li class="filter-popup-selected__item">
+                                        <span class="text">Финансы</span>
+                                        <span class="icon-close"></span>
+                                    </li>
+                                    <li class="filter-popup-selected__item">
+                                        <span class="text">Маркетинг</span>
+                                        <span class="icon-close"></span>
+                                    </li>
+                                </ul>
+                                <ul class="filter-popup-choose__list">
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Все темы</span>
+                                    </li>
+                                    <li class="filter-popup-choose__item">
+                                        <span class="icon-close"></span>
+                                        <span class="text">Охрана труда</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="popup-filter__buttons">
+                            <button class="text-button js-close">отмена</button>
+                            <button class="main-button">
+                                <span class="text">готово</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__wrapper container">
+                <div class="footer-info footer-info--category">
+                    <div class="footer-info__item-wrapper js-drop-item js-footer-info-item">
+                        <button class="footer-info__caption js-drop-button">
+                            <span>Регионы</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Киев</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Харьков</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Львов</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Одесса</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Днепр</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Херсон</a>
+                            </li>
+                        </ul>
+                        <button class="footer-info__button-more js-drop-button js-footer-info-button">
+                            <span class="text">Все регионы</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                    </div>
+                    <div class="footer-info__item-wrapper js-drop-item js-footer-info-item">
+                        <button class="footer-info__caption js-drop-button">
+                            <span>Темы мероприятий</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Финансы</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Бизнес</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Маркетинг</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Туризм</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Охрана труда</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Логистика</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Охрана труда</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Логистика</a>
+                            </li>
+                        </ul>
+                        <button class="footer-info__button-more js-drop-button js-footer-info-button">
+                            <span class="text">Все регионы</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                    </div>
+                    <div class="footer-info__item-wrapper js-drop-item js-footer-info-item">
+                        <button class="footer-info__caption js-drop-button">
+                            <span>О портале</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Мероприятия</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Организаторы</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Тренеры</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Статьи</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Добавить мероприятие</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Стать партнером</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Статьи</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Добавить мероприятие</a>
+                            </li>
+                            <li class="footer-info__item js-footer-info-link">
+                                <a href="#" class="footer-info__link">Стать партнером</a>
+                            </li>
+                        </ul>
+                        <button class="footer-info__button-more js-drop-button js-footer-info-button">
+                            <span class="text">Все регионы</span>
+                            <span class="icon-drop"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="footer-info footer-info--call-back">
+                    <div class="footer-info__item-wrapper">
+                        <p class="footer-info__caption">По вопросам рекламы:</p>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item">
+                                <a href="tel: +38 095 27 27 277" class="footer-info__link">+38 095 27 27 277</a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="tel: +38 095 27 27 655" class="footer-info__link">+38 095 27 27 655</a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="mailto: emal@email.com" class="footer-info__link">emal@email.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-info__item-wrapper">
+                        <p class="footer-info__caption">Общие вопросы:</p>
+                        <ul class="footer-info__list">
+                            <li class="footer-info__item">
+                                <a href="tel: +38 095 27 27 277" class="footer-info__link">+38 095 27 27 277</a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="tel: +38 095 27 27 655" class="footer-info__link">+38 095 27 27 655</a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="mailto: emal@email.com" class="footer-info__link">emal@email.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-info__item-wrapper footer-info__item-wrapper--social">
+                        <p class="footer-info__caption">Социальные сети:</p>
+                        <ul class="footer-info__list footer-info__list--social">
+                            <li class="footer-info__item">
+                                <a href="#" class="footer-info__link">
+                                    <span class="icon-fb"></span>
+                                </a>
+                            </li>
+                            <li class="footer-info__item">
+                                <a href="#" class="footer-info__link">
+                                    <span class="icon-inst"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-down">
+                <div class="footer-down__wrapper container">
+                    <p class="footer-down__copyright">© 2020 spektor</p>
+                    <a href="#" class="footer-down__link">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </footer>
+        <div class="overlay"></div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/news.js"></script>
+</body>
+</html>
