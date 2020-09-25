@@ -26,7 +26,6 @@ const app = new Vue({
             if(this.windowWidth > 1210) {
                 this.moveElements();
             }
-            
             this.initialSlider();
         },1000);
     }
