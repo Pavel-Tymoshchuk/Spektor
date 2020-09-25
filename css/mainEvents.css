@@ -2195,6 +2195,8 @@ main {
     width: calc(100% + 20px);
     height: 100px;
     margin: -10px 0px 10px -10px;
+  }
+  .events__item__img img {
     border-radius: 10px 10px 0px 0px;
   }
   .events__item__date {
