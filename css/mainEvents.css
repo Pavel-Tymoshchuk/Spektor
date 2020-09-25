@@ -2521,8 +2521,8 @@ main {
   .events__navigation__item--sort .events__navigation__button {
     height: 40px;
   }
-  .popup.popup-filter--calendar {
-    max-width: 320px;
+  .popup.popup-filter--calendar .popup__wrapper {
+    align-items: center;
   }
   .popup.popup-filter--calendar.active .calendar {
     visibility: visible;
