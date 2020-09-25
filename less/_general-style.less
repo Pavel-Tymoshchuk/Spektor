@@ -877,10 +877,13 @@ main {
 .popup-filter--events {
     &.popup {
         border-radius: 0px;
-        height: calc(100vh - 20px);
-        // height: -moz-available;
-        // height: -webkit-fill-available; 
-        // height: fill-available;
+        max-height: auto;
+        height: 100vh;
+        min-height: 100vh;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available; 
+        min-height: fill-available;
+        overflow: auto;
     }
     
     .popup__wrapper {
