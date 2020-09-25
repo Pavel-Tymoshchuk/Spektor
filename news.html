@@ -152,8 +152,17 @@
                     </div>
                     <div class="news-page__header">
                         <div class="news-page__hashtag">
-                            <p>Популярные теги:</p>
                             <ul class="news__hashtag-list">
+                                <li class="news__hashtag-item-text">Популярные теги:</li>
+                                <li class="news__hashtag-item">
+                                    <a class="news__hashtag-link" href="#">#goodSchool</a>
+                                </li>
+                                <li class="news__hashtag-item">
+                                    <a class="news__hashtag-link" href="#">#job</a>
+                                </li>
+                                <li class="news__hashtag-item">
+                                    <a class="news__hashtag-link" href="#">#money</a>
+                                </li>
                                 <li class="news__hashtag-item">
                                     <a class="news__hashtag-link" href="#">#goodSchool</a>
                                 </li>
@@ -316,65 +325,11 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="news__list news__list--container-list">
-                            <li class="news__item">
-                                <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
-                                <p class="news__item__type">Маркетинг</p>
-                                <a href="#" class="news__item__name">Сложные переговоры. Влияние и противостояние влиянию в деловых переговорах</a>
-                                <ul class="news__hashtag-list">
-                                    <li class="news__hashtag-item">
-                                        <a class="news__hashtag-link" href="#">#goodSchool</a>
-                                    </li>
-                                    <li class="news__hashtag-item">
-                                        <a class="news__hashtag-link" href="#">#job</a>
-                                    </li>
-                                    <li class="news__hashtag-item">
-                                        <a class="news__hashtag-link" href="#">#money</a>
-                                    </li>
-                                    <li class="news__hashtag-item news__hashtag-item--more">...</li>
-                                </ul>
-                                <div class="news__item__footer">
-                                    <p class="news__item__description">Good school, учебный центр</p>
-                                    <div class="general-drop js-drop-item">
-                                        <button class="news__item__social-button js-drop-button">
-                                            <span class="icon-more-social"></span>
-                                        </button>
-                                        <div class="general-drop-wrapper">
-                                            <ul class="general-social-list">
-                                                <li class="general-social-item general-social-item--fb">
-                                                    <a href="#" class="general-social-link">
-                                                        <span class="icon-fb"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="general-social-item general-social-item--message">
-                                                    <a href="#" class="general-social-link">
-                                                        <span class="icon-message"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="general-social-item general-social-item--teleg">
-                                                    <a href="#" class="general-social-link">
-                                                        <span class="icon-teleg"></span>
-                                                    </a>
-                                                </li>
-                                                <li class="general-social-item general-social-item--whats-app">
-                                                    <a href="#" class="general-social-link">
-                                                        <span class="icon-whats-app"></span>
-                                                    </a>
-                                                </li>
-                                                <!-- <li class="general-social-item general-social-item--twiter">
-                                                    <a href="#" class="general-social-link">
-                                                        <span class="icon-twiter"></span>
-                                                    </a>
-                                                </li> -->
-                                                <li class="general-social-item general-social-item--viber">
-                                                    <a href="#" class="general-social-link">
-                                                        <span class="icon-viber"></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                        <ul class="news__list news__list--container-list news__list--offsers">
+                            <li class="offers-news" v-lazy:background-image="'./img/offers-img-1.png'">
+                                <p class="offers-news__caption">Разместить статью</p>
+                                <p class="offers-news__sub-info">Вы можете опубликовать свои метериалы на Spektor</p>
+                                <a href="#" class="offers-news__link">подробнее</a>
                             </li>
                             <li class="news__item">
                                 <img class="news__item__img" v-lazy="'./img/news-img-1.png'" alt="title">
@@ -913,10 +868,10 @@
                             </li>
                         </ul>
                     </div>
+                    <button class="button-border button-border--position-center">
+                        <span class="text">загрузить ещё</span>
+                    </button>
                 </div>
-                <button class="button-border button-border--position-center">
-                    <span class="text">загрузить ещё</span>
-                </button>
             </section>
             <section class="popular__news">
                 <div class="popular__news__wrapper container">

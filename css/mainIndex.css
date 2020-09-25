@@ -1034,6 +1034,7 @@ main {
   background-size: cover;
   border-radius: 50%;
   margin-right: 10px;
+  flex-shrink: 0;
 }
 .people__info__name {
   font-weight: 700;
@@ -1048,6 +1049,123 @@ main {
   color: #828282;
 }
 /* //People */
+/* General hashtag */
+.news__hashtag-list {
+  display: flex;
+  margin-bottom: 20px;
+}
+.news__hashtag-item {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.news__hashtag-item--more {
+  pointer-events: none;
+}
+.news__hashtag-link {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  color: #828282;
+  padding: 0px 10px;
+  background-color: #E7E7E7;
+  border-radius: 3px;
+}
+/* //General hashtag */
+/* General table */
+.general-table {
+  border: 1px solid #E7E7E7;
+  border-radius: 20px;
+}
+.general-table__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #E7E7E7;
+  border-radius: 20px 20px 0px 0px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: capitalize;
+}
+.general-table__item {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 20px 30px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.general-table__item:last-child {
+  margin-bottom: 10px;
+  border: none;
+}
+.general-table__item__type {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .position-number {
+    width: calc(9% - 10px);
+  }
+  .position-name {
+    width: calc(24% - 10px);
+  }
+  .position-more {
+    width: calc(24% - 10px);
+  }
+  .position-description {
+    width: calc(43% - 10px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .position-number {
+    width: calc(6% - 5px);
+  }
+  .position-name {
+    width: calc(22% - 5px);
+  }
+  .position-more {
+    width: calc(22% - 5px);
+  }
+  .position-description {
+    width: calc(50% - 5px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .general-table {
+    border-radius: 0px;
+    padding: 0px;
+  }
+  .general-table__header {
+    display: none;
+  }
+  .general-table__item {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .general-table__item:last-child {
+    margin-bottom: 0px;
+  }
+  .general-table__item__info {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+  }
+  .general-table__item__info:last-child {
+    margin-bottom: 0px;
+  }
+  .general-table__item__type {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 110%;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+}
+/* //General table */
 /* General hover */
 @media screen and (min-width: 1201px) {
   /* General drop */
@@ -1987,7 +2105,7 @@ main {
   margin-right: 30px;
   flex-shrink: 0;
   font-weight: 700;
-  filter: drop-shadow(0px 4px 10px rgba(192, 192, 192, 0.25));
+  box-shadow: 0px 4px 10px rgba(192, 192, 192, 0.25);
   border-radius: 20px;
   padding: 30px;
   background-position: center;
@@ -2548,6 +2666,7 @@ main {
   line-height: 24px;
   margin-bottom: 15px;
   opacity: 0;
+  min-height: 49px;
   transform: translateX(-40px);
   transition: opacity 0.4s 0.2s, transform 0.4s 0.2s;
   transition-timing-function: ease-in-out;
@@ -2627,27 +2746,6 @@ main {
   line-height: 120%;
   margin-bottom: 10px;
 }
-.news__hashtag-list {
-  display: flex;
-  margin-bottom: 20px;
-}
-.news__hashtag-item {
-  margin-right: 10px;
-  flex-shrink: 0;
-}
-.news__hashtag-item--more {
-  pointer-events: none;
-}
-.news__hashtag-link {
-  display: block;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 24px;
-  color: #828282;
-  padding: 0px 10px;
-  background-color: #E7E7E7;
-  border-radius: 3px;
-}
 .news__item__footer {
   display: flex;
   justify-content: space-between;
@@ -2700,11 +2798,11 @@ main {
     width: 236px;
     margin-right: 10px;
   }
+  .news__item .news__hashtag-item:nth-child(n + 3):not(.news__hashtag-item--more) {
+    display: none;
+  }
   .news__item__img {
     height: 88px;
-  }
-  .news__hashtag-item:nth-child(n + 3):not(.news__hashtag-item--more) {
-    display: none;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2716,8 +2814,12 @@ main {
   .news__slider {
     display: none;
   }
+  .news__list {
+    margin-right: 0px;
+  }
   .news__item {
     width: 100%;
+    margin-right: 0px;
   }
   .news__item__img {
     height: 113px;

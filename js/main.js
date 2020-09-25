@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
-    var dropList = document.querySelectorAll('.js-drop-item');
+    let dropList = document.querySelectorAll('.js-drop-item');
+    let dropListElse = document.querySelectorAll('.js-drop-item-else');
 
     document.addEventListener('click', function(e){
         let element = e.target;
@@ -13,6 +14,18 @@ document.addEventListener("DOMContentLoaded", function(){
                 element.closest('.js-drop-item').classList.remove('active');
             else
                 element.closest('.js-drop-item').classList.add('active');
+                
+        }
+        
+        if(element.closest('.js-drop-button-else')){
+            let isActive = element.closest('.js-drop-item-else').classList.contains('active')? true: false;
+            
+            dropListElse.forEach(item => {item.classList.remove('active')});
+            
+            if(isActive)
+                element.closest('.js-drop-item-else').classList.remove('active');
+            else
+                element.closest('.js-drop-item-else').classList.add('active');
                 
         }
         
