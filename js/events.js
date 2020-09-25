@@ -1,13 +1,14 @@
 Vue.use(VueLazyload)
 
 import {listMove} from './mixin/moveLists.js'
-
+import {sliderOneCard} from './mixin/sliderOneCard.js'
+ 
 const app = new Vue({
     el: "#app",
     data: {
         windowWidth: 0,
     },
-    mixins: [listMove],
+    mixins: [listMove,sliderOneCard],
     methods: {
     },
     components: {

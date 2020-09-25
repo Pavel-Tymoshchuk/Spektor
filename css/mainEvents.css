@@ -2516,12 +2516,15 @@ main {
   .popup.popup-filter--calendar {
     max-width: 320px;
   }
+  .popup.popup-filter--calendar.active .calendar {
+    visibility: visible;
+  }
   .calendar {
     position: static;
-    visibility: visible;
     opacity: 1;
     padding: 0px 0px 0px 10px;
     box-shadow: none;
+    transition: none;
   }
   .calendar__list {
     flex-direction: column;
