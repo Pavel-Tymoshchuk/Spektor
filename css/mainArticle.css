@@ -718,7 +718,7 @@ main {
 }
 .popup-filter--events.popup {
   border-radius: 0px;
-  height: 100vh;
+  height: calc(100vh - 20px);
   height: -moz-available;
   height: -webkit-fill-available;
   height: fill-available;
@@ -727,7 +727,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 30px 16px 20px;
-  height: 100vh;
+  height: 100%;
 }
 .popup-filter--events .main-button--filter {
   margin-top: 20px;
