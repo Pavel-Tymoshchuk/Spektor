@@ -1617,7 +1617,6 @@ main {
   border-radius: 20px;
   max-width: 470px;
   width: 100%;
-  min-height: -webkit-fill-available;
 }
 .popup .input_wrapper {
   margin-bottom: 20px;
