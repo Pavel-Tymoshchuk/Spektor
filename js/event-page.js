@@ -22,7 +22,9 @@ const app = new Vue({
         });
         
         setTimeout(() =>{
-            this.moveElements();
+            if(this.windowWidth > 1210) {
+                this.moveElements();
+            }
             this.initialSlider();
         },1000);
     }
